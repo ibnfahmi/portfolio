@@ -1,5 +1,59 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Check for saved theme preference or use the system preference
+    const currentTheme = localStorage.getItem('theme') || 
+                        (prefersDarkScheme.matches ? 'dark' : 'light');
+    
+    // Apply the saved theme or system preference
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        applyLightTheme();
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        applyDarkTheme();
+    }
+    
+    // Toggle theme when the button is clicked
+    themeToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'light');
+            applyLightTheme();
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'dark');
+            applyDarkTheme();
+        }
+    });
+    
+    function applyLightTheme() {
+        document.documentElement.style.setProperty('--bg', 'var(--light-bg)');
+        document.documentElement.style.setProperty('--secondary-bg', 'var(--light-secondary)');
+        document.documentElement.style.setProperty('--text-color', 'var(--light-text-primary)');
+        document.documentElement.style.setProperty('--text-secondary', 'var(--light-text-secondary)');
+        document.documentElement.style.setProperty('--card-bg', 'var(--light-card-bg)');
+        document.documentElement.style.setProperty('--border-color', 'var(--light-border-color)');
+    }
+    
+    function applyDarkTheme() {
+        document.documentElement.style.setProperty('--bg', 'var(--dark-bg)');
+        document.documentElement.style.setProperty('--secondary-bg', 'var(--dark-secondary)');
+        document.documentElement.style.setProperty('--text-color', 'var(--dark-text-primary)');
+        document.documentElement.style.setProperty('--text-secondary', 'var(--dark-text-secondary)');
+        document.documentElement.style.setProperty('--card-bg', 'var(--dark-card-bg)');
+        document.documentElement.style.setProperty('--border-color', 'var(--dark-border-color)');
+    }
     const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
