@@ -4,34 +4,37 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 
 ## Features
 
-- Clean, modern UI with dark theme
 - Responsive design that works on all devices
-- Sections for projects, experience, tools, and insights
-- Contact form for potential clients or employers
+- Clean, modern UI with dark theme
+- Sections for projects, experience, tools, and contact information
 - Smooth scrolling navigation
+- Interactive elements with animations
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (with custom properties and flexbox)
+- CSS3 (with custom properties and flexbox/grid layouts)
 - JavaScript (vanilla)
 - Font Awesome icons
 - Google Fonts
 
 ## Preview
 
-The website is hosted on GitHub Pages and can be accessed [here](https://github.com/username/Portfolio).
+The website includes the following sections:
+- Profile/About Me
+- Projects
+- Experience
+- Tools & Technologies
+- Design Insights
+- Contact Form
 
-## Development
+## Setup
 
-To run this project locally, simply clone the repository and open the `index.html` file in your browser.
+To view the website locally:
 
-```bash
-git clone https://github.com/username/Portfolio.git
-cd Portfolio
-# Open index.html in your browser
-```
+1. Clone this repository
+2. Open `index.html` in your browser
 
-## License
+## Deployment
 
-MIT
+This portfolio is deployed using GitHub Pages at [username.github.io/portfolio](https://username.github.io/portfolio).
