@@ -1,0 +1,581 @@
+/* Global Styles */
+:root {
+    --dark-bg: #121212;
+    --dark-secondary: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-orange: #ff5722;
+    --accent-green: #b4ff4a;
+    --card-bg: #1a1a1a;
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+.text-muted {
+    color: var(--text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+section {
+    padding: 5rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--dark-secondary);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-orange);
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    padding-top: 6rem;
+}
+
+.profile-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.profile-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.profile-stats .stat {
+    text-align: center;
+}
+
+.profile-stats .stat span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.profile-stats .stat p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 80%;
+}
+
+.stats-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-box span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card.orange {
+    background-color: var(--accent-orange);
+}
+
+.skill-card.green {
+    background-color: var(--accent-green);
+    color: #000;
+}
+
+.skill-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Projects Section */
+.section-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    margin-bottom: 0.5rem;
+}
+
+.section-title .subtitle {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateX(10px);
+}
+
+.project-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.project-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Experience Section */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.experience-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    max-width: 80%;
+    margin-bottom: 1rem;
+}
+
+.experience-item .date {
+    font-size: 0.8rem;
+    color: var(--accent-orange);
+    margin-bottom: 0.5rem;
+}
+
+/* Tools Section */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tool-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.tool-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tool-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Design Insights Section */
+.insights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.insight-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+}
+
+.insight-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.insight-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.read-more {
+    color: var(--accent-orange);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--dark-secondary);
+    padding: 5rem 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-card {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .skills-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        background-color: var(--dark-secondary);
+    }
+    
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    section {
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .stats-container {
+        flex-wrap: wrap;
+    }
+    
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-image {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* Active Navigation State */
+nav ul li.active a {
+    background-color: var(--accent-orange);
+}
+
+/* Animations */
+.skill-card, .project-card, .tool-card, .insight-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill-card.animate, .project-card.animate, .tool-card.animate, .insight-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.tool-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.tool-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.tool-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.tool-card:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.tool-card:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+.insight-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.insight-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
