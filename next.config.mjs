@@ -1,5 +1,5 @@
 const isGithubPages = process.env.GITHUB_PAGES === 'true';
-const repositoryName = 'portfolio'; // Your actual repo name
+const repositoryName = 'portfolio';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -22,8 +22,19 @@ const nextConfig = {
   },
 };
 
+// Initialize userConfig as null if the import fails
+let userConfig = null;
+try {
+  userConfig = await import('./v0-user-next.config.mjs');
+} catch (e) {
+  try {
+    userConfig = await import('./v0-user-next.config');
+  } catch (innerError) {
+    // Ignore error
+  }
+}
+
 if (userConfig) {
-  // ESM imports will have a "default" property
   const config = userConfig.default || userConfig;
 
   for (const key in config) {
