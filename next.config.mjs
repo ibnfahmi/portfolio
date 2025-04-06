@@ -1,3 +1,4 @@
+basePath: '/portfolio',
 let userConfig = undefined
 try {
   // try to import ESM first
