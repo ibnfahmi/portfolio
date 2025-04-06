@@ -4,7 +4,6 @@ const repositoryName = 'portfolio';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: isGithubPages ? `/${repositoryName}` : '',
   assetPrefix: isGithubPages ? `/${repositoryName}/` : '',
   eslint: {
     ignoreDuringBuilds: true,
@@ -53,4 +52,3 @@ if (userConfig) {
 }
 
 export default nextConfig;
-
