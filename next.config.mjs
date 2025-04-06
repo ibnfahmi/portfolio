@@ -1,20 +1,11 @@
-const basePath = '/ibnfahmi/portfolio';
-
-let userConfig = undefined;
-try {
-  // try to import ESM first
-  userConfig = await import('./v0-user-next.config.mjs');
-} catch (e) {
-  try {
-    // fallback to CJS import
-    userConfig = await import('./v0-user-next.config');
-  } catch (innerError) {
-    // ignore error
-  }
-}
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+const repositoryName = 'portfolio'; // Your actual repo name
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: isGithubPages ? `/${repositoryName}` : '',
+  assetPrefix: isGithubPages ? `/${repositoryName}/` : '',
   eslint: {
     ignoreDuringBuilds: true,
   },

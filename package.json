@@ -5,11 +5,8 @@
   "homepage": "https://github.com/ibnfahmi/portfolio",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "export": "next build && next export",
+    "deploy": "GITHUB_PAGES=true next build && next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
