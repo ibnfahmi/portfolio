@@ -14,8 +14,8 @@ export default function Portfolio() {
         <div className="container flex h-16 items-center justify-between">
           <div>
             <Link href="/" aria-label="Ahmed Fahmi">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                <Image src="/img/avatar.jpg" alt="Ahmed Fahmi" fill className="object-cover" priority />
+              <div className="relative w-35 h-9 overflow-hidden">
+              <h1 className="text-2xl md:text-2xl lg:text-2xl font-bold tracking-tight mb-4">Ahmed Fahmi</h1>
               </div>
             </Link>
           </div>
@@ -36,7 +36,7 @@ export default function Portfolio() {
           <div className="flex items-center gap-10">  {/* Changed from gap-2 to gap-10 (32px) */}
             <ThemeToggle />
             <Button variant="default" asChild>
-              <Link href="#contact">Contact Me</Link>
+              <Link href="#contact">Contact me</Link>
             </Button>
           </div>
         </div>
@@ -48,40 +48,33 @@ export default function Portfolio() {
           <div className="relative w-40 h-40 mb-8 rounded-full overflow-hidden">  {/* Removed border-4 border-primary */}
             <Image src="/img/avatar.jpg" alt="Your Name" fill className="object-cover" priority />
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-4">Ahmed fahmi</h1>
+          
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-[700px]">
-            Product Designer crafting beautiful, user-centered digital experiences
+          Senior product | Design systems designer
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild>
-              <Link href="#portfolio">View My Work</Link>
+              <Link href="#portfolio">View case studies</Link>
             </Button>
             <Button variant="outline" className="gap-2">
-              <Download className="h-4 w-4" /> Download Resume
+              <Download className="h-4 w-4" />
+                <Link href="#contact">Download Resume</Link>
             </Button>
           </div>
         </section>
 
         {/* About Section */}
         <section id="about" className="py-12 md:py-24 border-t">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <h2 className="text-3xl font-bold tracking-tight mb-8">About Me</h2>
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-1">
               <p className="text-lg mb-4">
-                I'm a passionate product designer with over 5 years of experience creating intuitive and engaging user
-                experiences. My approach combines user research, strategic thinking, and creative problem-solving to
-                build products that people love.
+              I'm a product designer with <strong className="font-bold">6+ years</strong> of experience, specializing in FinTech and marketplaces. I've worked with companies like <strong className="font-bold">Money Fellows</strong>, <strong className="font-bold">4Sale</strong>, and <strong className="font-bold">Sarmady</strong>, leading <strong className="font-bold">design systems</strong>, enhancing user experiences, and mentoring teams.
               </p>
               <p className="text-lg mb-4">
-                With a background in both design and front-end development, I bring a unique perspective to product
-                design that bridges the gap between aesthetics and functionality.
-              </p>
-              <p className="text-lg">
-                When I'm not designing, you can find me exploring new hiking trails, experimenting with photography, or
-                attending local design meetups.
-              </p>
+              I focus on scalable, cost-effective design solutions that drive business growth and improve usability. Whether refining interfaces or collaborating cross-functionally, my goal is always to make products look great and work even better.              </p>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
+            <div className="flex-1 relative h-[400px] rounded-lg overflow-hidden">
               <Image src="/placeholder.svg?height=400&width=600" alt="About me" fill className="object-cover" />
             </div>
           </div>
@@ -89,7 +82,7 @@ export default function Portfolio() {
 
         {/* Portfolio Section */}
         <section id="portfolio" className="py-12 md:py-24 border-t">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">My Work</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-8">Case studies</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <Card key={item} className="overflow-hidden">
@@ -124,7 +117,7 @@ export default function Portfolio() {
 
         {/* Experience Section */}
         <section id="experience" className="py-12 md:py-24 border-t">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Work Experience</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-8">Work Experience</h2>
           <div className="space-y-12">
             {[
               {
@@ -165,7 +158,7 @@ export default function Portfolio() {
 
         {/* Skills Section */}
         <section id="skills" className="py-12 md:py-24 border-t">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Skills & Tools</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-8">Skills & Tools</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div>
               <h3 className="text-xl font-bold mb-4">Design</h3>
@@ -207,7 +200,7 @@ export default function Portfolio() {
 
         {/* Contact Section */}
         <section id="contact" className="py-12 md:py-24 border-t">
-          <h2 className="text-3xl font-bold tracking-tighter mb-8">Get In Touch</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-8">Get In Touch</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-lg mb-6">
