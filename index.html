@@ -38,11 +38,12 @@
   <main>
     <!-- Hero Section with Avatar -->
     <section class="hero">
-      <div class="container">
+      <div class="container" style="position: relative; z-index: 1;">
         <div class="avatar-container">
           <img src="img/avatar.jpg" alt="Ahmed Fahmi" class="avatar">
         </div>
-        <p class="hero-subtitle">Senior Product Designer</p>
+        <h1 class="hero-title">Ahmed Fahmi</h1>
+        <p class="hero-subtitle">Senior Product Designer, with a focus on design systems.</p>
         <div class="hero-buttons">
           <a href="#portfolio" class="primary-btn">View My Work</a>
           <a href="#" class="secondary-btn">
@@ -387,6 +388,21 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const animation = lottie.loadAnimation({
+        container: document.getElementById('animation-container'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/Animation.json'
+      });
+      
+      // Apply monochrome filter
+      document.getElementById('animation-container').querySelector('svg').style.filter = 'grayscale(100%)';
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
