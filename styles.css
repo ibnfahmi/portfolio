@@ -222,6 +222,20 @@
   .mobile-menu-btn {
     display: none;
   }
+
+  @media (max-width: 586px) {
+    .main-nav {
+      display: none;
+    }
+    
+    .header .container {
+      justify-content: flex-start;
+    }
+    
+    .theme-toggle {
+      margin-left: auto;
+    }
+  }
   
   .mobile-menu-btn span {
     width: 100%;
