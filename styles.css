@@ -220,7 +220,7 @@
   
   
   .mobile-menu-btn {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 1.5rem;
