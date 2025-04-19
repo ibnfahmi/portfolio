@@ -1,6 +1,26 @@
 // Set current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+// Theme toggle functionality
+const themeToggle = document.querySelector('.theme-toggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or use preferred color scheme
+const currentTheme = localStorage.getItem('theme') || 
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+// Apply the current theme
+html.setAttribute('data-theme', currentTheme);
+
+// Theme toggle click handler
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
+
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const mainNav = document.querySelector('.main-nav');
@@ -64,6 +84,7 @@ if (contactForm) {
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
+  const header = document.querySelector('.header');
   
   let currentSection = '';
   
@@ -81,4 +102,11 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
+  
+  // Toggle header border on scroll
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
