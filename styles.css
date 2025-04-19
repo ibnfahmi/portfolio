@@ -148,7 +148,7 @@
   }
   
   .main-nav {
-    display: none;
+    display: flex;
   }
   
   .nav-link {
@@ -221,13 +221,6 @@
   
   .mobile-menu-btn {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 1.5rem;
-    height: 1.25rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
   }
   
   .mobile-menu-btn span {
