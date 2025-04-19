@@ -84,6 +84,7 @@ if (contactForm) {
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
+  const header = document.querySelector('.header');
   
   let currentSection = '';
   
@@ -101,4 +102,11 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
+  
+  // Toggle header border on scroll
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
